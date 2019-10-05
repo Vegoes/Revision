@@ -33,21 +33,25 @@ namespace Aplicacion
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOpcions = new System.Windows.Forms.Button();
+            this.btnGardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(989, 628);
+            this.listBox1.Size = new System.Drawing.Size(989, 641);
             this.listBox1.TabIndex = 3;
             // 
             // btnNovo
             // 
+            this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.Location = new System.Drawing.Point(1007, 23);
             this.btnNovo.Name = "btnNovo";
@@ -55,9 +59,11 @@ namespace Aplicacion
             this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "Novo Alimento";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.Location = new System.Drawing.Point(1007, 167);
             this.btnBorrar.Name = "btnBorrar";
@@ -68,6 +74,7 @@ namespace Aplicacion
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(1007, 311);
             this.btnEditar.Name = "btnEditar";
@@ -76,33 +83,35 @@ namespace Aplicacion
             this.btnEditar.Text = "Editar Alimento";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnOpcions
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1007, 599);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(152, 38);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Editar Alimento";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnOpcions.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnOpcions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpcions.Location = new System.Drawing.Point(1007, 599);
+            this.btnOpcions.Name = "btnOpcions";
+            this.btnOpcions.Size = new System.Drawing.Size(152, 38);
+            this.btnOpcions.TabIndex = 10;
+            this.btnOpcions.Text = "Opcións";
+            this.btnOpcions.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnGardar
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1007, 455);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 40);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Editar Alimento";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGardar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnGardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGardar.Location = new System.Drawing.Point(1007, 455);
+            this.btnGardar.Name = "btnGardar";
+            this.btnGardar.Size = new System.Drawing.Size(152, 40);
+            this.btnGardar.TabIndex = 11;
+            this.btnGardar.Text = "Gardar Cambios";
+            this.btnGardar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 666);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnGardar);
+            this.Controls.Add(this.btnOpcions);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnNovo);
@@ -119,8 +128,8 @@ namespace Aplicacion
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnOpcions;
+        private System.Windows.Forms.Button btnGardar;
     }
 }
 
