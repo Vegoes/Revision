@@ -17,19 +17,5 @@ namespace Aplicacion
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProgressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
