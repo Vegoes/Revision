@@ -15,50 +15,38 @@ namespace Aplicacion
         public Form1()
         {
             InitializeComponent();
-            listView1.View = View.Details;
-            listView1.LabelEdit = true;
-            listView1.AllowColumnReorder = true;
-            // Display check boxes.
-            //listView1.CheckBoxes = true;
-            // Select the item and subitems when selection is made.
-            listView1.FullRowSelect = true;
-            // Display grid lines.
-            listView1.GridLines = true;
-            // Sort the items in the list in ascending order.
-            listView1.Sorting = SortOrder.Ascending;
+            listDespensa.View = View.Details;
+            listDespensa.FullRowSelect = true;
+            listDespensa.GridLines = true;
+            listDespensa.Sorting = SortOrder.Ascending;
 
-            // Create three items and three sets of subitems for each item.
-            ListViewItem item1 = new ListViewItem("item1", 0);
-            // Place a check mark next to the item.
-            item1.Checked = true;
-            item1.SubItems.Add("1");
-            item1.SubItems.Add("2");
-            item1.SubItems.Add("3");
-            ListViewItem item2 = new ListViewItem("item2", 1);
-            item2.SubItems.Add("4");
-            item2.SubItems.Add("5");
-            item2.SubItems.Add("6");
-            ListViewItem item3 = new ListViewItem("item3", 0);
-            // Place a check mark next to the item.
-            item3.Checked = true;
-            item3.SubItems.Add("7");
-            item3.SubItems.Add("8");
-            item3.SubItems.Add("9");
-
-            // Create columns for the items and subitems.
-            // Width of -2 indicates auto-size.
-            listView1.Columns.Add("Item Column", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Column 2", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Column 3", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Column 4", -2, HorizontalAlignment.Center);
-
-            //Add the items to the ListView.
-            listView1.Items.AddRange(new ListViewItem[] { item1, item2, item3 });
+            listDespensa.Columns.Add("Nome do Producto", 300, HorizontalAlignment.Center);
+            listDespensa.Columns.Add("Marca do Producto", 300, HorizontalAlignment.Center);
+            listDespensa.Columns.Add("Cantidades", 150, HorizontalAlignment.Center);
+            listDespensa.Columns.Add("Lugar de Compra", 250, HorizontalAlignment.Center);
+            listDespensa.Columns.Add("Caducidade", -2, HorizontalAlignment.Center);
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(this);
+            Form2 form2 = new Form2(this, 1);
+            form2.ShowDialog();
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            if (listDespensa.SelectedItems.Count != 0)
+            {
+                for (int i = listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
+                {
+                    listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
+                }
+            }
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(this, 2);
             form2.ShowDialog();
         }
     }
