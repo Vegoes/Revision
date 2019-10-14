@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.lblCaducidade = new System.Windows.Forms.Label();
             this.txtCaducidade = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.toolTipDefinicion = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtNome
@@ -126,6 +128,7 @@
             this.lblCantidades.Size = new System.Drawing.Size(77, 16);
             this.lblCantidades.TabIndex = 6;
             this.lblCantidades.Text = "Cantidades";
+            this.toolTipDefinicion.SetToolTip(this.lblCantidades, "Son valores válidos números enteiros");
             // 
             // txtLugar
             // 
@@ -161,6 +164,7 @@
             this.lblCaducidade.Size = new System.Drawing.Size(82, 16);
             this.lblCaducidade.TabIndex = 9;
             this.lblCaducidade.Text = "Caducidade";
+            this.toolTipDefinicion.SetToolTip(this.lblCaducidade, "Son valores válidos 0-0-0 <-> 0/0/0 ou \"0 de  mes de 0\"");
             // 
             // txtCaducidade
             // 
@@ -224,5 +228,6 @@
         private System.Windows.Forms.TextBox txtCantidades;
         private System.Windows.Forms.TextBox txtLugar;
         private System.Windows.Forms.TextBox txtCaducidade;
+        private System.Windows.Forms.ToolTip toolTipDefinicion;
     }
 }
