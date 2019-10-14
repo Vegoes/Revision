@@ -46,8 +46,8 @@ namespace Aplicacion
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(this, 2);
-            form2.ShowDialog();
+            //Form2 form2 = new Form2(this, 2);
+            //form2.ShowDialog();
         }
     }
 }
