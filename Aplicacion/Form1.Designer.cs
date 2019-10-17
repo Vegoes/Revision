@@ -44,7 +44,7 @@ namespace Aplicacion
             this.btnNovo.Location = new System.Drawing.Point(1224, 38);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(152, 40);
-            this.btnNovo.TabIndex = 4;
+            this.btnNovo.TabIndex = 1;
             this.btnNovo.Text = "Novo Alimento";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
@@ -56,7 +56,7 @@ namespace Aplicacion
             this.btnBorrar.Location = new System.Drawing.Point(1224, 179);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(152, 40);
-            this.btnBorrar.TabIndex = 5;
+            this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar Alimento";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
@@ -68,7 +68,7 @@ namespace Aplicacion
             this.btnEditar.Location = new System.Drawing.Point(1224, 320);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(152, 40);
-            this.btnEditar.TabIndex = 7;
+            this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar Alimento";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
@@ -80,7 +80,7 @@ namespace Aplicacion
             this.btnOpcions.Location = new System.Drawing.Point(1224, 602);
             this.btnOpcions.Name = "btnOpcions";
             this.btnOpcions.Size = new System.Drawing.Size(152, 38);
-            this.btnOpcions.TabIndex = 10;
+            this.btnOpcions.TabIndex = 5;
             this.btnOpcions.Text = "Opcións";
             this.btnOpcions.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +91,7 @@ namespace Aplicacion
             this.btnGardar.Location = new System.Drawing.Point(1224, 461);
             this.btnGardar.Name = "btnGardar";
             this.btnGardar.Size = new System.Drawing.Size(152, 40);
-            this.btnGardar.TabIndex = 11;
+            this.btnGardar.TabIndex = 4;
             this.btnGardar.Text = "Gardar Cambios";
             this.btnGardar.UseVisualStyleBackColor = true;
             // 
@@ -105,7 +105,7 @@ namespace Aplicacion
             this.listDespensa.Location = new System.Drawing.Point(12, 38);
             this.listDespensa.Name = "listDespensa";
             this.listDespensa.Size = new System.Drawing.Size(1206, 602);
-            this.listDespensa.TabIndex = 17;
+            this.listDespensa.TabIndex = 0;
             this.listDespensa.UseCompatibleStateImageBehavior = false;
             // 
             // Form1

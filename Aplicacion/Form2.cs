@@ -19,11 +19,24 @@ namespace Aplicacion
         Form1 form1;
         int numSeleccionado;
 
+        private void NovoProducto()
+        {
+
+        }
         public Form2(Form1 form, int numSelec)
         {
             InitializeComponent();
             form1 = form;
             numSeleccionado = numSelec;
+
+            if (numSeleccionado == 1)
+            {
+                this.Text = "Novo Alimento";
+            }
+            else
+            {
+                this.Text = "Editar Alimento";
+            }
         }
 
         private void BtnGardar_Click(object sender, EventArgs e)
@@ -47,11 +60,17 @@ namespace Aplicacion
             }
             else
             {
-                if (char.IsLetter(Convert.ToChar(txtCantidades.Text)))
+                for (int i = 0; i < txtCantidades.Text.Length; i++)
+                {
+                    if (char.IsLetter(Convert.ToChar(txtCantidades.Text[i])))
+                    {
+                        avisoLetra = true;
+                    }
+                }
+                if (avisoLetra)
                 {
                     txtCantidades.BackColor = Color.Pink;
-                    MessageBox.Show("Por favor, introduza un número válido en Cantidades", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    avisoLetra = true;
+                    MessageBox.Show("Por favor, introduza un número válido en Cantidades", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -67,7 +86,7 @@ namespace Aplicacion
             }
             catch
             {
-                MessageBox.Show("Formato de data non válido. Por favor, introduza un formato de data válido", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                MessageBox.Show("Formato de data non válido. Por favor, introduza un formato de data válido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtCaducidade.BackColor = Color.Pink;
                 avisoFormato = true;
             }
@@ -77,9 +96,17 @@ namespace Aplicacion
                 MessageBox.Show("Hay campos que teñen que ser enchidos", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
 
-            if (!aviso && !avisoLetra && !avisoFormato && numSeleccionado == 1)
+            if (numSeleccionado == 2 && !aviso && !avisoLetra && !avisoFormato)
             {
-                this.Text = "Novo Alimento";
+
+                for (int i = form1.listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
+                {
+                    form1.listDespensa.Items.RemoveAt(form1.listDespensa.SelectedIndices[i]);
+                }
+            }
+
+            if (!aviso && !avisoLetra && !avisoFormato)
+            {
                 producto = new ListViewItem(txtNome.Text, form1.listDespensa.Items.Count);
                 producto.Checked = true;
                 producto.SubItems.Add(txtMarca.Text);
@@ -90,23 +117,6 @@ namespace Aplicacion
                 form1.listDespensa.Items.AddRange(new ListViewItem[] { producto });
                 this.Close();
             }
-            //else
-            //{
-            //    this.Text = "Editar Alimento";
-            //    for (int i = form1.listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
-            //    {
-            //        form1.listDespensa.Items.RemoveAt(form1.listDespensa.SelectedIndices[i]);
-            //        producto = new ListViewItem(txtNome.Text, form1.listDespensa.Items.Count);
-            //        producto.Checked = true;
-            //        producto.SubItems.Add(txtMarca.Text);
-            //        producto.SubItems.Add(txtCantidades.Text);
-            //        producto.SubItems.Add(txtLugar.Text);
-            //        producto.SubItems.Add(txtCaducidade.Text);
-
-            //        form1.listDespensa.Items.AddRange(new ListViewItem[] { producto });
-            //        this.Close();
-            //    }
-            //}
         }
 
         private void TxtNome_TextChanged(object sender, EventArgs e)

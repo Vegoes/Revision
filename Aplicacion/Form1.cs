@@ -37,17 +37,32 @@ namespace Aplicacion
         {
             if (listDespensa.SelectedItems.Count != 0)
             {
-                for (int i = listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
+                if (MessageBox.Show("¿Está seguro de querer borrar o producto seleccionado?", "Dúbida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
+
+                    for (int i = listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
+                    {
+                        listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
+                    }
                 }
+            } else
+            {
+                MessageBox.Show("Selecciona o producto que queiras borrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            //Form2 form2 = new Form2(this, 2);
-            //form2.ShowDialog();
+            if (listDespensa.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Selecciona o producto que queiras editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (listDespensa.Items.Count != 0 && listDespensa.SelectedItems.Count !=0)
+            {
+                Form2 form2 = new Form2(this, 2);
+                form2.ShowDialog();
+            }
         }
     }
 }
