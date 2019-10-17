@@ -21,3 +21,4 @@ Botón Novo Alimento totalmente funcional. Rexeita no apartado "Cantidades" que 
 
 # 17 de Outubro
 Solucionado o erro que saltaba cando se introducían cantidades maiores que 9. Engádese novos MessageBox avisando ao usuario que ten que seleccionar o producto se o quere editar/borrar
+Aproveitamento do código de Botón Novo para poder utilizalo tamén no Botón Editar.
