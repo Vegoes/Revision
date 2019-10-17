@@ -1,4 +1,5 @@
-1 de Outubro: Colocación do ListBox e botons do formulario principal. Creación dun formulario secundario para a recollida de datos
+#1 de Outubro
+Colocación do ListBox e botons do formulario principal. Creación dun formulario secundario para a recollida de datos
 
 # 3 de Outubro: Problemas con Visual Studio e GitHub. Reinstalación de Visual Studio.
 
