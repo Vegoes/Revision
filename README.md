@@ -20,5 +20,5 @@ Botons Editar e Borrar habilitados. Pódense borrar productos. Xa se pode editar
 Botón Novo Alimento totalmente funcional. Rexeita no apartado "Cantidades" que non se introduzca número e no apartado "Data de Caducidade" que non  se introduza unha data correcta. Se non se introducen os tres campos obligatorios, non introduce novo producto. "Deshabilitado" Botón Editar a espera de poder escribir un código acorde ao seu funcionamento.
 
 # 17 de Outubro
-Solucionado o erro que saltaba cando se introducían cantidades maiores que 9. Engádese novos MessageBox avisando ao usuario que ten que seleccionar o producto se o quere editar/borrar
+Solucionado o erro que saltaba cando se introducían cantidades maiores que 9. Engádese novos MessageBox avisando ao usuario que ten que seleccionar o producto se o quere editar/borrar.
 Aproveitamento do código de Botón Novo para poder utilizalo tamén no Botón Editar.
