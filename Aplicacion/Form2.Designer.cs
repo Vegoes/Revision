@@ -91,7 +91,7 @@
             this.txtMarca.Location = new System.Drawing.Point(130, 100);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(438, 22);
-            this.txtMarca.TabIndex = 3;
+            this.txtMarca.TabIndex = 1;
             // 
             // btnGardar
             // 
@@ -100,7 +100,7 @@
             this.btnGardar.Location = new System.Drawing.Point(11, 427);
             this.btnGardar.Name = "btnGardar";
             this.btnGardar.Size = new System.Drawing.Size(113, 33);
-            this.btnGardar.TabIndex = 4;
+            this.btnGardar.TabIndex = 5;
             this.btnGardar.Text = "Gardar";
             this.btnGardar.UseVisualStyleBackColor = true;
             this.btnGardar.Click += new System.EventHandler(this.BtnGardar_Click);
@@ -114,7 +114,7 @@
             this.txtCantidades.Location = new System.Drawing.Point(130, 186);
             this.txtCantidades.Name = "txtCantidades";
             this.txtCantidades.Size = new System.Drawing.Size(438, 22);
-            this.txtCantidades.TabIndex = 5;
+            this.txtCantidades.TabIndex = 2;
             this.txtCantidades.TextChanged += new System.EventHandler(this.TxtCantidades_TextChanged);
             // 
             // lblCantidades
@@ -139,7 +139,7 @@
             this.txtLugar.Location = new System.Drawing.Point(130, 270);
             this.txtLugar.Name = "txtLugar";
             this.txtLugar.Size = new System.Drawing.Size(438, 22);
-            this.txtLugar.TabIndex = 8;
+            this.txtLugar.TabIndex = 3;
             // 
             // lblLugar
             // 
@@ -175,7 +175,7 @@
             this.txtCaducidade.Location = new System.Drawing.Point(130, 355);
             this.txtCaducidade.Name = "txtCaducidade";
             this.txtCaducidade.Size = new System.Drawing.Size(438, 22);
-            this.txtCaducidade.TabIndex = 10;
+            this.txtCaducidade.TabIndex = 4;
             this.txtCaducidade.TextChanged += new System.EventHandler(this.TxtCaducidade_TextChanged);
             // 
             // btnCancelar
@@ -185,7 +185,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(455, 427);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(113, 33);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
