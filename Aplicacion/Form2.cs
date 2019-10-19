@@ -62,7 +62,7 @@ namespace Aplicacion
             {
                 for (int i = 0; i < txtCantidades.Text.Length; i++)
                 {
-                    if (char.IsLetter(Convert.ToChar(txtCantidades.Text[i])))
+                    if (char.IsLetter(Convert.ToChar(txtCantidades.Text[i])) || !char.IsDigit(Convert.ToChar(txtCantidades.Text[i])))
                     {
                         avisoLetra = true;
                     }
@@ -98,7 +98,6 @@ namespace Aplicacion
 
             if (numSeleccionado == 2 && !aviso && !avisoLetra && !avisoFormato)
             {
-
                 for (int i = form1.listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
                 {
                     form1.listDespensa.Items.RemoveAt(form1.listDespensa.SelectedIndices[i]);
