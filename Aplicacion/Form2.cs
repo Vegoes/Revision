@@ -19,10 +19,6 @@ namespace Aplicacion
         Form1 form1;
         int numSeleccionado;
 
-        private void NovoProducto()
-        {
-
-        }
         public Form2(Form1 form, int numSelec)
         {
             InitializeComponent();
