@@ -28,3 +28,5 @@ Solucionado o erro que permitía introducir números negativos en "Cantidades". 
 
 Creación da BD para poder gardar productos. Instalación de DB Browser para crear a Base de Datos. Instalación da Librería System.Data.SQLite.Core e Dapper para o acceso da Aplicación a BD (Se algunha das librerías/programa usados non a podo usar, volvo a refacer todo xD). Problemas para acceder ao dato "Lugar" na BD xa que non detecta dato, devolve un NULL. O dato está gardado na BD, pero non se pode despois recuperar o dato. 
 
+Anulado de momento para gardar productos na BD. Cada vez que gardo o ListView na BD, gardo todo. De momento non pode gardar datos na BD.
+
