@@ -223,11 +223,11 @@
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblCaducidade;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtCantidades;
-        private System.Windows.Forms.TextBox txtLugar;
-        private System.Windows.Forms.TextBox txtCaducidade;
         private System.Windows.Forms.ToolTip toolTipDefinicion;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtMarca;
+        public System.Windows.Forms.TextBox txtCantidades;
+        public System.Windows.Forms.TextBox txtLugar;
+        public System.Windows.Forms.TextBox txtCaducidade;
     }
 }

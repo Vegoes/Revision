@@ -37,7 +37,7 @@ namespace Aplicacion
         {
             if (listDespensa.SelectedItems.Count != 0)
             {
-                if (MessageBox.Show("¿Está seguro de querer borrar o producto seleccionado?", "Dúbida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Está seguro de querer borrar o producto/s seleccionado/s?", "Dúbida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     for (int i = listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
@@ -45,7 +45,8 @@ namespace Aplicacion
                         listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
                     }
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Selecciona o producto que queiras borrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -57,10 +58,19 @@ namespace Aplicacion
             {
                 MessageBox.Show("Selecciona o producto que queiras editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            if (listDespensa.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Por favor, seleccione so un producto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
-            if (listDespensa.Items.Count != 0 && listDespensa.SelectedItems.Count !=0)
+            if (listDespensa.Items.Count != 0 && listDespensa.SelectedItems.Count == 1)
             {
                 Form2 form2 = new Form2(this, 2);
+                form2.txtNome.Text = listDespensa.SelectedItems[0].SubItems[0].Text;
+                form2.txtMarca.Text = listDespensa.SelectedItems[0].SubItems[1].Text;
+                form2.txtCantidades.Text = listDespensa.SelectedItems[0].SubItems[2].Text;
+                form2.txtLugar.Text = listDespensa.SelectedItems[0].SubItems[3].Text;
+                form2.txtCaducidade.Text = listDespensa.SelectedItems[0].SubItems[4].Text;
                 form2.ShowDialog();
             }
         }
