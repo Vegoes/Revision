@@ -26,7 +26,7 @@ namespace Aplicacion
             using (IDbConnection conexion = new SQLiteConnection(Conexion()))
             {
                 conexion.Execute("insert into Productos (Nome, Marca, Cantidades, Lugar, Caducidade) values " +
-                    "(@Nome, @Marca, @Cantidades, @Compra, @Caducidade)", producto);
+                    "(@Nome, @Marca, @Cantidades, @Lugar, @Caducidade)", producto);
             }
         }
 

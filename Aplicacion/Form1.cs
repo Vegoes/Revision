@@ -38,7 +38,7 @@ namespace Aplicacion
                 producto.Checked = true;
                 producto.SubItems.Add(productos[i].Marca);
                 producto.SubItems.Add(Convert.ToString(productos[i].Cantidades));
-                producto.SubItems.Add(productos[i].Compra);
+                producto.SubItems.Add(productos[i].Lugar);
                 producto.SubItems.Add(productos[i].Caducidade);
                 listDespensa.Items.AddRange(new ListViewItem[] { producto });
             }
@@ -60,7 +60,7 @@ namespace Aplicacion
                     productoNovo.Nome = listDespensa.Items[i].SubItems[0].Text;
                     productoNovo.Marca = listDespensa.Items[i].SubItems[1].Text;
                     productoNovo.Cantidades = Convert.ToInt32(listDespensa.Items[i].SubItems[2].Text);
-                    productoNovo.Compra = listDespensa.Items[i].SubItems[3].Text;
+                    productoNovo.Lugar = listDespensa.Items[i].SubItems[3].Text;
                     productoNovo.Caducidade = listDespensa.Items[i].SubItems[4].Text;
                     BD.GardarProducto(productoNovo);
                 }
