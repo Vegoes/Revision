@@ -31,4 +31,4 @@ Creación da BD para poder gardar productos. Instalación de DB Browser para cre
 Anulado de momento para gardar productos na BD. Cada vez que gardo o ListView na BD, gardo todo. De momento non pode gardar datos na BD.
 
 # 20 de Outubro
-Solucionado o bug que impedía mostrar o Lugar de Compra do producto
+Solucionado o bug que impedía mostrar o Lugar de Compra do producto.
