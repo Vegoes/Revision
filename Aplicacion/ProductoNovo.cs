@@ -12,7 +12,7 @@ namespace Aplicacion
         public string Nome { set; get; }
         public string Marca { set; get; }
         public int Cantidades { set; get; }
-        public string Compra { set; get; }
+        public string Lugar { set; get; }
         public string Caducidade { set; get; }
     }
 }
