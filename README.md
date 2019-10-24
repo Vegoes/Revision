@@ -32,3 +32,6 @@ Anulado de momento para gardar productos na BD. Cada vez que gardo o ListView na
 
 # 20 de Outubro
 Solucionado o bug que impedía mostrar o Lugar de Compra do producto.
+
+# 24 de Outubro
+Habilitada na aplicación o poder gardar os productos na BD. Mini avance (esqueleto) para poder borrar o producto que queiras. De momento non elimina nada.
