@@ -13,7 +13,6 @@ namespace Aplicacion
     public partial class Form1 : Form
     {
         List<ProductoNovo> productos = new List<ProductoNovo>();
-        ProductoNovo productoGardar = new ProductoNovo();
         ListViewItem producto;
 
         public Form1()
@@ -47,24 +46,6 @@ namespace Aplicacion
         private void CargarProductos()
         {
             productos = BD.CargarProducto();
-        }
-
-        private void GardarProductoNovo()
-        {
-            if (listDespensa.Items.Count > 0)
-            {
-                ProductoNovo productoNovo = new ProductoNovo();
-
-                for (int i = 0; i < listDespensa.Items.Count; i++)
-                {
-                    productoNovo.Nome = listDespensa.Items[i].SubItems[0].Text;
-                    productoNovo.Marca = listDespensa.Items[i].SubItems[1].Text;
-                    productoNovo.Cantidades = Convert.ToInt32(listDespensa.Items[i].SubItems[2].Text);
-                    productoNovo.Lugar = listDespensa.Items[i].SubItems[3].Text;
-                    productoNovo.Caducidade = listDespensa.Items[i].SubItems[4].Text;
-                    BD.GardarProducto(productoNovo);
-                }
-            }
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -113,11 +94,6 @@ namespace Aplicacion
                 form2.txtCaducidade.Text = listDespensa.SelectedItems[0].SubItems[4].Text;
                 form2.ShowDialog();
             }
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //GardarProductoNovo();
         }
     }
 }
