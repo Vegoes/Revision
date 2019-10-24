@@ -109,6 +109,14 @@ namespace Aplicacion
                 producto.SubItems.Add(txtLugar.Text);
                 producto.SubItems.Add(dataFormato);
 
+                ProductoNovo productosBD = new ProductoNovo();
+                productosBD.Nome = txtNome.Text;
+                productosBD.Marca = txtMarca.Text;
+                productosBD.Cantidades = Convert.ToInt32(txtCantidades.Text);
+                productosBD.Lugar = txtLugar.Text;
+                productosBD.Caducidade = dataFormato;
+                BD.GardarProducto(productosBD);
+
                 form1.listDespensa.Items.AddRange(new ListViewItem[] { producto });
                 this.Close();
             }

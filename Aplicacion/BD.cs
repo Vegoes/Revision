@@ -30,6 +30,14 @@ namespace Aplicacion
             }
         }
 
+        public static void BorrarProducto (ProductoNovo borrar)
+        {
+            using (IDbConnection conexion = new SQLiteConnection(Conexion()))
+            {
+                conexion.Execute("delete from Productos where Nome = @", borrar);
+            }
+        }
+
         private static string Conexion(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
