@@ -34,7 +34,16 @@ namespace Aplicacion
         {
             using (IDbConnection conexion = new SQLiteConnection(Conexion()))
             {
-                conexion.Execute("delete from Productos where Nome = @", borrar);
+                conexion.Execute("delete from Productos where Id = " + borrar.Id);
+            }
+        }
+
+        public static void EditarProducto (ProductoNovo editar)
+        {
+            using (IDbConnection conexion = new SQLiteConnection(Conexion()))
+            {
+                conexion.Execute(string.Format("UPDATE Productos SET Nome=\"{0}\", Marca=\"{1}\", Cantidades={2}, Lugar=\"{3}\",Caducidade=\"{4}\" where id ={5}",
+                    editar.Nome, editar.Marca, editar.Cantidades, editar.Lugar, editar.Caducidade, editar.Id));
             }
         }
 

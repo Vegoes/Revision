@@ -16,6 +16,7 @@ namespace Aplicacion
         bool avisoLetra = false;
         bool avisoFormato = false;
         string dataFormato;
+        int numEditar;
         Form1 form1;
         int numSeleccionado;
 
@@ -115,7 +116,7 @@ namespace Aplicacion
                 productosBD.Cantidades = Convert.ToInt32(txtCantidades.Text);
                 productosBD.Lugar = txtLugar.Text;
                 productosBD.Caducidade = dataFormato;
-                BD.GardarProducto(productosBD);
+                BD.EditarProducto(productosBD);
 
                 form1.listDespensa.Items.AddRange(new ListViewItem[] { producto });
                 this.Close();
