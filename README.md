@@ -35,3 +35,6 @@ Solucionado o bug que impedía mostrar o Lugar de Compra do producto.
 
 # 24 de Outubro
 Habilitada na aplicación o poder gardar os productos na BD. Mini avance (esqueleto) para poder borrar o producto que queiras. De momento non elimina nada.
+
+# 28 de Outubro
+A Aplicación pode eliminar os productos da BD, pero non funciona correctamente. O código para Editar está xa escrito, pero falta pasar a List de Form1 a Form2 para poder editar ben
