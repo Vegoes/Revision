@@ -23,7 +23,6 @@ namespace Aplicacion
             listDespensa.View = View.Details;
             listDespensa.FullRowSelect = true;
             listDespensa.GridLines = true;
-            listDespensa.Sorting = SortOrder.Ascending;
 
             listDespensa.Columns.Add("Nome do Producto", 300, HorizontalAlignment.Center);
             listDespensa.Columns.Add("Marca do Producto", 300, HorizontalAlignment.Center);
@@ -63,7 +62,10 @@ namespace Aplicacion
 
                     for (int i = listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
                     {
+                        //Bug, primeiro gardar na List o producto novo, porque logo, se o quero eliminar, non podo, non está na List)
+                        BD.BorrarProducto(productos[listDespensa.SelectedIndices[i]]);
                         listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
+                        productos.Remove(productos[listDespensa.SelectedIndices[i]]);
                     }
                 }
             }
