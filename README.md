@@ -38,3 +38,6 @@ Habilitada na aplicación o poder gardar os productos na BD. Mini avance (esquel
 
 # 28 de Outubro
 A Aplicación pode eliminar os productos da BD, pero non funciona correctamente. O código para Editar está xa escrito, pero falta pasar a List de Form1 a Form2 para poder editar ben
+
+# 1 de Novembro
+A Aplicación pode introducir, eliminar e editar productos e volcar os datos correctamente na BD
