@@ -49,7 +49,7 @@ namespace Aplicacion
 
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(this, 1);
+            Form2 form2 = new Form2(this, 1, productos);
             form2.ShowDialog();
         }
 
@@ -62,10 +62,9 @@ namespace Aplicacion
 
                     for (int i = listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
                     {
-                        //Bug, primeiro gardar na List o producto novo, porque logo, se o quero eliminar, non podo, non está na List)
                         BD.BorrarProducto(productos[listDespensa.SelectedIndices[i]]);
-                        listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
                         productos.Remove(productos[listDespensa.SelectedIndices[i]]);
+                        listDespensa.Items.RemoveAt(listDespensa.SelectedIndices[i]);
                     }
                 }
             }
@@ -88,7 +87,7 @@ namespace Aplicacion
 
             if (listDespensa.Items.Count != 0 && listDespensa.SelectedItems.Count == 1)
             {
-                Form2 form2 = new Form2(this, 2);
+                Form2 form2 = new Form2(this, 2, productos);
                 form2.txtNome.Text = listDespensa.SelectedItems[0].SubItems[0].Text;
                 form2.txtMarca.Text = listDespensa.SelectedItems[0].SubItems[1].Text;
                 form2.txtCantidades.Text = listDespensa.SelectedItems[0].SubItems[2].Text;
