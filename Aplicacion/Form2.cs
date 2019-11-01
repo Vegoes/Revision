@@ -16,15 +16,17 @@ namespace Aplicacion
         bool avisoLetra = false;
         bool avisoFormato = false;
         string dataFormato;
-        int numEditar;
         Form1 form1;
         int numSeleccionado;
+        int numEditar;
+        List<ProductoNovo> productosList;
 
-        public Form2(Form1 form, int numSelec)
+        public Form2(Form1 form, int numSelec, List<ProductoNovo> productos)
         {
             InitializeComponent();
             form1 = form;
             numSeleccionado = numSelec;
+            productosList = productos;
 
             if (numSeleccionado == 1)
             {
@@ -97,6 +99,7 @@ namespace Aplicacion
             {
                 for (int i = form1.listDespensa.SelectedIndices.Count - 1; i >= 0; i--)
                 {
+                    numEditar = productosList[form1.listDespensa.SelectedIndices[i]].Id;
                     form1.listDespensa.Items.RemoveAt(form1.listDespensa.SelectedIndices[i]);
                 }
             }
@@ -116,7 +119,15 @@ namespace Aplicacion
                 productosBD.Cantidades = Convert.ToInt32(txtCantidades.Text);
                 productosBD.Lugar = txtLugar.Text;
                 productosBD.Caducidade = dataFormato;
-                BD.EditarProducto(productosBD);
+                productosList.Add(productosBD);
+                
+                if (numSeleccionado != 2)
+                {
+                    BD.GardarProducto(productosBD);
+                } else
+                {
+                    BD.EditarProducto(productosBD, numEditar);
+                }
 
                 form1.listDespensa.Items.AddRange(new ListViewItem[] { producto });
                 this.Close();

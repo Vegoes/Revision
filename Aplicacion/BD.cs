@@ -38,12 +38,12 @@ namespace Aplicacion
             }
         }
 
-        public static void EditarProducto (ProductoNovo editar)
+        public static void EditarProducto (ProductoNovo editar, int numEditar)
         {
             using (IDbConnection conexion = new SQLiteConnection(Conexion()))
             {
                 conexion.Execute(string.Format("UPDATE Productos SET Nome=\"{0}\", Marca=\"{1}\", Cantidades={2}, Lugar=\"{3}\",Caducidade=\"{4}\" where id ={5}",
-                    editar.Nome, editar.Marca, editar.Cantidades, editar.Lugar, editar.Caducidade, editar.Id));
+                    editar.Nome, editar.Marca, editar.Cantidades, editar.Lugar, editar.Caducidade, numEditar));
             }
         }
 
