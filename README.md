@@ -44,3 +44,6 @@ A Aplicación pode introducir, eliminar e editar productos e volcar os datos cor
 
 # 7 de Novembro
 Creación dunha Web Service que poida mostrar os productos sen stock. De momento so houbo unha toma de contacto.
+
+# 9 de Novembro
+Creación dunha Web Api Service que mostra una lista de productos sen stock. Instalación da Librería EntityFrameworkCore para poder realizar consultas coa Web Api Service
