@@ -8,9 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Aplicacion
 {
-    class BD
+    public static class BD
     {
         public static List<ProductoNovo> CargarProducto()
         {
@@ -30,7 +31,7 @@ namespace Aplicacion
             }
         }
 
-        public static void BorrarProducto (ProductoNovo borrar)
+        public static void BorrarProducto(ProductoNovo borrar)
         {
             using (IDbConnection conexion = new SQLiteConnection(Conexion()))
             {
@@ -38,7 +39,7 @@ namespace Aplicacion
             }
         }
 
-        public static void EditarProducto (ProductoNovo editar, int numEditar)
+        public static void EditarProducto(ProductoNovo editar, int numEditar)
         {
             using (IDbConnection conexion = new SQLiteConnection(Conexion()))
             {
