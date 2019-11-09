@@ -22,7 +22,7 @@ namespace ListaCompra.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<ProductoNovo>> Get()
         {
-            return Ok(compra.Productos.Where(producto => producto.Cantidades == 0).FirstOrDefault());
+            return Ok(compra.Productos.Where(producto => producto.Cantidades == 0));
         }
     }
 }
