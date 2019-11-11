@@ -22,7 +22,17 @@ namespace ListaCompra.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<ProductoNovo>> Get()
         {
-            return Ok(compra.Productos.Where(producto => producto.Cantidades == 0));
+            //Buscar A: Que sexa visible para 3os
+            var condicion = compra.Productos.Where(producto => producto.Cantidades == 0).FirstOrDefault();
+
+            if (condicion != null)
+            {
+                return Ok(compra.Productos.Where(producto => producto.Cantidades == 0));
+            }
+            else
+            {
+                return BadRequest("Lista da compra baleira! :D");
+            }
         }
     }
 }
