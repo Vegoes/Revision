@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,8 @@ namespace Aplicacion
 {
     public static class BD
     {
+        //public static string ligazon = Path.Combine(Directory.GetCurrentDirectory(), @"netcoreapp3.0\DespensaBD.db");
+
         public static List<ProductoNovo> CargarProducto()
         {
             using (IDbConnection conexion = new SQLiteConnection(Conexion()))
