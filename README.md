@@ -47,3 +47,6 @@ Instalación do paquete para poder utilizar ASP.NET. Creación dunha Web Service
 
 # 9 de Novembro
 Creación dunha Web Api Service que mostra una lista de productos sen stock. Instalación da Librería EntityFrameworkCore para poder realizar consultas coa Web Api Service.
+
+# 11 de Novembro
+Modificación da Web Api Service para que mostre unha mensaxe cando a Lista da Compra estea baleira.
