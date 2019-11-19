@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -28,7 +29,8 @@ namespace ListaCompra
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            var conexionString = @"Data Source=C:\Users\Veronica\source\Repos\Revision\Aplicacion\bin\Debug\DespensaBD.db";
+            string directorio = Environment.GetEnvironmentVariable("USERPROFILE")+ @"\source\Repos\Revision\Aplicacion\bin\Debug\DespensaBD.db";
+            var conexionString = "Data Source=" + directorio;
             services.AddDbContext<Compra>(options => options.UseSqlite(conexionString));
         }
 

@@ -32,7 +32,6 @@ namespace Aplicacion
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnOpcions = new System.Windows.Forms.Button();
             this.listDespensa = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
@@ -52,7 +51,7 @@ namespace Aplicacion
             // 
             this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(1224, 226);
+            this.btnBorrar.Location = new System.Drawing.Point(1224, 321);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(152, 40);
             this.btnBorrar.TabIndex = 2;
@@ -64,24 +63,13 @@ namespace Aplicacion
             // 
             this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(1224, 414);
+            this.btnEditar.Location = new System.Drawing.Point(1224, 600);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(152, 40);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar Alimento";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // btnOpcions
-            // 
-            this.btnOpcions.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnOpcions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpcions.Location = new System.Drawing.Point(1224, 602);
-            this.btnOpcions.Name = "btnOpcions";
-            this.btnOpcions.Size = new System.Drawing.Size(152, 38);
-            this.btnOpcions.TabIndex = 5;
-            this.btnOpcions.Text = "Opcións";
-            this.btnOpcions.UseVisualStyleBackColor = true;
             // 
             // listDespensa
             // 
@@ -102,7 +90,6 @@ namespace Aplicacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1388, 666);
             this.Controls.Add(this.listDespensa);
-            this.Controls.Add(this.btnOpcions);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnNovo);
@@ -117,7 +104,6 @@ namespace Aplicacion
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnOpcions;
         public System.Windows.Forms.ListView listDespensa;
     }
 }
