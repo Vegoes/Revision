@@ -61,7 +61,14 @@ namespace Aplicacion
             {
                 for (int i = 0; i < txtCantidades.Text.Length; i++)
                 {
-                    if (char.IsLetter(Convert.ToChar(txtCantidades.Text[i])) || !char.IsDigit(Convert.ToChar(txtCantidades.Text[i])))
+                    try
+                    {
+                        if (char.IsLetter(Convert.ToChar(txtCantidades.Text[i])) || !char.IsDigit(Convert.ToChar(txtCantidades.Text[i])) || Convert.ToInt32(txtCantidades.Text) > 100)
+                        {
+                            avisoLetra = true;
+                        }
+                    }
+                    catch (OverflowException)
                     {
                         avisoLetra = true;
                     }
@@ -120,11 +127,12 @@ namespace Aplicacion
                 productosBD.Lugar = txtLugar.Text;
                 productosBD.Caducidade = dataFormato;
                 productosList.Add(productosBD);
-                
+
                 if (numSeleccionado != 2)
                 {
                     BD.GardarProducto(productosBD);
-                } else
+                }
+                else
                 {
                     BD.EditarProducto(productosBD, numEditar);
                 }
